@@ -1,4 +1,6 @@
 import { DataSource } from 'typeorm';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
@@ -9,6 +11,9 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_NAME,
   synchronize: false,
   logging: false,
+  // logging: 'all',
+  logger: 'advanced-console',
+
   entities: ['src/entities/**/*.ts'],
   migrations: ['src/migrations/**/*.ts'],
 });

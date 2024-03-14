@@ -46,21 +46,22 @@
       <h6><strong>{{name}}</strong></h6>
       <p>{{description}}</p>
       <hr />
-      <button class='btn btn-outline-secondary add-btn'>{{i18n
-        'home.add_to_cart'
-        }}</button>
-      <a class='btn btn-outline-success' href='/product/detail/{{id}}'>{{i18n
-        'home.view'
-        }}</a>
+      <form action="/cart/add/{{id}}" method="post" style="display: inline;">
+        <button type="submit" class="btn btn-outline-success">{{i18n 'home.add_to_cart'}}</button>
+      </form>
+      <a class='btn btn-outline-success' href='/product/detail/{{id}}'>{{i18n 'home.view'}}</a>
       <h4 style='display: inline-block'><strong>{{price}}</strong></h4>
     </div>
   </div>
   {{/each}}
 </div>
+{{#if flash.product_exist}}
+<p class="flash flash-error">{{flash.product_exist}}</p>
+{{/if}}
 <!-- Hiển thị phân trang -->
 <ul class="pagination">
   {{#if paginationLinks}}
-    {{{paginationLinks}}}
+  {{{paginationLinks}}}
   {{/if}}
 </ul>
 <br />

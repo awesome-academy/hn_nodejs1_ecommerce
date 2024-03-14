@@ -21,10 +21,10 @@ export class OrderDetail extends ClassicEntity {
   price: number;
 
   @ManyToOne(() => Order, (order) => order.orderDetails)
-  @JoinColumn({ name: 'order_id' })
+  @JoinColumn()
   order: Order;
 
   @ManyToOne(() => Product, (product) => product.orderDetails)
-  @JoinColumn({ name: 'product_id' })
+  @JoinColumn()
   product: Product;
 }

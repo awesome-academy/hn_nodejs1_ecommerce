@@ -40,7 +40,9 @@
                   <span class='act-price'>{{t 'detail.category'}}: {{product.category.name}}</span>
                 </div>
               </div>
-              <button class='btn btn-danger text-uppercase mr-2 px-4'>Add to cart</button>
+              <form action="/cart/add/{{product.id}}" method="post" style="display: inline;">
+                <button type="submit" class="btn btn-outline-success">{{i18n 'home.add_to_cart'}}</button>
+              </form>
               <i class='fa fa-heart text-muted'></i>
               <i class='fa fa-share-alt text-muted'></i>
             </div>

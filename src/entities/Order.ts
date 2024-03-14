@@ -37,7 +37,7 @@ export class Order extends ClassicEntity {
   phone: string;
 
   @ManyToOne(() => User, (user) => user.orders)
-  @JoinColumn({ name: 'user_id' })
+  @JoinColumn()
   user: User;
 
   // One-to-Many relationship with OrderDetail entity

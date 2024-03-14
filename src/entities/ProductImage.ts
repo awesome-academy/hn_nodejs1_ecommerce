@@ -11,6 +11,6 @@ export class ProductImage extends ClassicEntity {
   image: string;
 
   @ManyToOne(() => Product, (product) => product.productImages)
-  @JoinColumn({ name: "product_id" })
+  @JoinColumn()
   product: Product;
 }

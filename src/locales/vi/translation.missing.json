@@ -12,5 +12,9 @@
     "register": "home.register",
     "coppyright": "home.coppyright",
     "select": "home.select"
+  },
+  "cart": {
+    "home": "cart.home",
+    "updateCart": "cart.updateCart"
   }
 }

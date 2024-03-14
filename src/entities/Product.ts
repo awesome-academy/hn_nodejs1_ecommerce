@@ -39,7 +39,7 @@ export class Product extends ClassicEntity {
   unit: string;
 
   @ManyToOne(() => Category, (category) => category.products)
-  @JoinColumn({ name: 'category_id' })
+  @JoinColumn()
   category: Category;
 
   // One-to-Many relationship with CartItem entity

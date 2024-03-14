@@ -12,7 +12,7 @@
         "cart": "Cart",
         "login": "Login",
         "register": "Register",
-        "copyright": "Copyright 2024",
+        "coppyright": "Copyright 2024",
         "search": "Search",
         "add_to_cart": "Add to cart",
         "view": "View"
@@ -47,5 +47,15 @@
         "unit": "Unit",
         "category": "Category",
         "notfound": "product not exsits"
+    },
+    "cart": {
+        "home": "Continue Shopping",
+        "items": "Items",
+        "total": "Total",
+        "checkout": "Checkout",
+        "cartItems": "Name item",
+        "product_exsist": "The product already exists in the shopping cart",
+        "updateItem": "Update Item",
+        "removeItem": "Remove Item"
     }
 }

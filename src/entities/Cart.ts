@@ -1,9 +1,8 @@
 import {
-  Column,
   Entity,
   JoinColumn,
-  ManyToOne,
   OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { User } from './User';
@@ -14,8 +13,8 @@ export class Cart extends ClassicEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => User, (user) => user.carts)
-  @JoinColumn({ name: 'user_id' })
+  @OneToOne(() => User, (user) => user.cart)
+  @JoinColumn()
   user: User;
 
   // One-to-Many relationship with CartItem entity

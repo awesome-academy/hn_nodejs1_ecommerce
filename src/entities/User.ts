@@ -1,4 +1,4 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Order } from './Order';
 import { Cart } from './Cart';
 import { ClassicEntity } from '../base/BaseEntity';
@@ -31,6 +31,6 @@ export class User extends ClassicEntity {
   orders: Order[];
 
   // One-to-Many relationship with Cart entity
-  @OneToMany(() => Cart, (cart) => cart.user)
-  carts: Cart[];
+  @OneToOne(() => Cart, (cart) => cart.user)
+  cart: Cart;
 }

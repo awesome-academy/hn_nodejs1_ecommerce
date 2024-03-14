@@ -11,10 +11,10 @@ export class CartItem extends ClassicEntity {
   quantity: number;
 
   @ManyToOne(() => Product, (product) => product.cartItems)
-  @JoinColumn({ name: "product_id" })
+  @JoinColumn()
   product: Product;
 
   @ManyToOne(() => Cart, (cart) => cart.cartItems)
-  @JoinColumn({ name: "cart_id" })
+  @JoinColumn()
   cart: Cart;
 }

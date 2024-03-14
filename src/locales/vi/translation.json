@@ -47,5 +47,15 @@
         "unit": "Đơn vị",
         "category": "Loại sản phẩm",
         "notfound": "sản phẩm không tồn tại"
+    },
+    "cart": {
+        "home": "Tiếp tục mua sắm",
+        "items": "Số sản phẩm",
+        "total": "Tổng tiền",
+        "checkout": "Thanh toán",
+        "cartItems": "Tên sản phẩm",
+        "product_exsist": "Sản phẩm đã tồn tại trong giỏ hàng",
+        "updateItem": "Cập nhật giỏ hàng ",
+        "removeItem": "Xóa sản phẩm"
     }
 }
